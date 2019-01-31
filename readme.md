@@ -11,8 +11,8 @@
 - 提供了多种运行模式，使用灵活，扩展性高。
 
 ## 运行结构示意图
-![](/image/structure1.svg)
-![](/image/structure2.svg)
+- <img src="/image/structure1.svg" width="240"/>
+- <img src="/image/structure2.svg" width="240"/>
 
 ## 安装与架设
 - <img src="https://wx2.sinaimg.cn/large/8ddab624ly1fwzu4lofwbg203o03kwjm.gif" width="240"/>
