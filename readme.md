@@ -15,7 +15,12 @@
 <img src="/image/structure2.svg" width="480"/>
 
 ## 安装与架设
+- [PHP消息转发控制中心](install/php)
+- [QQ机器人 酷Q机器人](install/coolq)
+- [Minecraft Bukkit 服务端](install/bukkit)
+- [Minecraft Sponge 服务端](install/sponge)
 - <img src="https://wx2.sinaimg.cn/large/8ddab624ly1fwzu4lofwbg203o03kwjm.gif" width="240"/>
 
 ## 反馈与支持
+- 直接在本repo中发起issue即可。
 - <img src="https://wx1.sinaimg.cn/large/8ddab624ly1fwzu4luz6oj20f00f0q3k.jpg" width="240"/>
