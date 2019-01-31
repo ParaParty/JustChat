@@ -11,8 +11,8 @@
 - 提供了多种运行模式，使用灵活，扩展性高。
 
 ## 运行结构示意图
-<img src="/image/structure1.svg" width="480"/>
-<img src="/image/structure2.svg" width="480"/>
+<img src="image/structure1.svg" width="480"/>
+<img src="image/structure2.svg" width="480"/>
 
 ## 安装与架设
 - [PHP消息转发控制中心](install/php)
