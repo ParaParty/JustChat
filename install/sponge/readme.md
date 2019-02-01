@@ -1,7 +1,14 @@
 # [安装与架设](../)/Minecraft Sponge 服务端
 
 ## 概述
-- ```JustChat Minecraft Sponge客户端```用于接受与发送Minecraft聊天消息以供玩家与```JustChat QQ机器人端```或```JustChat 消息转发控制中心```等使用。
+- ```JustChat Minecraft Sponge 客户端```用于接受与发送Minecraft聊天消息以供玩家与```JustChat QQ机器人端```或```JustChat 消息转发控制中心```等使用。
+
+## 安装
+1. [下载插件](https://github.com/ExerciseBook/JustChat/releases/)
+1. 复制jar文件到 [Sponge](https://www.spongepowered.org/)插件目录
+1. 重启一次 Sponge ，使得插件生成插件配置文件
+1. 使用 [notepad++](https://notepad-plus-plus.org/) 或 [Sublime Text](http://www.sublimetext.com/) 或 记事本 或 gedit 或 vim 等文本编辑器修改**并保存**配置文件
+1. 重启 Sponge ， 使得修改后的配置文件生效。
 
 ## 配置文件
 - 基础配置文件 ```config.conf```

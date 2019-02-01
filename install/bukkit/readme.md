@@ -2,9 +2,17 @@
 - [MCBBS发布帖](http://www.mcbbs.net/thread-840749-1-1.html)
 
 ## 概述
-- ```JustChat Minecraft Bukkit客户端```用于接受与发送Minecraft聊天消息以供玩家与```JustChat QQ机器人端```或```JustChat 消息转发控制中心```等使用。
+- ```JustChat Minecraft Bukkit 客户端```用于接受与发送Minecraft聊天消息以供玩家与```JustChat QQ机器人端```或```JustChat 消息转发控制中心```等使用。
 
-### 配置文件
+## 安装
+1. [下载插件](https://github.com/ExerciseBook/JustChat/releases/)
+1. 复制到 [Bukkit](https://bukkit.org/)/Spigot(https://spigotmc.org/)插件目录
+1. 重启一次 Bukkit/Spigot ，使得插件生成插件配置文件
+1. 使用 [notepad++](https://notepad-plus-plus.org/) 或 [Sublime Text](http://www.sublimetext.com/) 或 记事本 或 gedit 或 vim 等文本编辑器修改**并保存**配置文件
+1. 重启 Bukkit/Spigot ， 使得修改后的配置文件生效。
+
+## 配置文件 
+- config.json
 ```
 ############### 服务器设置 ###############
 #服务器IP，必须是x.x.x.x形式，使用域名会连接不上服务器

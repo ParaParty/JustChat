@@ -1,10 +1,17 @@
 # [安装与架设](../)/QQ机器人 酷Q机器人
 
 ## 概述
-- ```JustChat酷Q机器人端```用于接受与发送QQ群消息以供群员与```JustChat Minecraft服务器端```或```JustChat 消息转发控制中心```等使用。
+- ```JustChat 酷Q机器人端```用于接受与发送QQ群消息以供群员与```JustChat Minecraft服务器端```或```JustChat 消息转发控制中心```等使用。
+
+## 安装
+1. [下载插件](https://github.com/ExerciseBook/JustChat/releases/)
+1. 复制cpk文件到 [酷Q](https://cqp.cc)插件目录
+1. 重启一次 酷Q ，使得插件生成插件配置文件
+1. 使用 [notepad++](https://notepad-plus-plus.org/) 或 [Sublime Text](http://www.sublimetext.com/) 或 记事本 或 gedit 或 vim 等文本编辑器修改**并保存**配置文件
+1. 重启 酷Q ， 使得修改后的配置文件生效。
 
 ## 配置文件
-- 本插件使用的配置文档均以***UTF-8无BOM***形式储存。
+- 本插件使用的配置文档均以**UTF-8无BOM**形式储存。
 - 当存在[json](https://json.org)格式的配置文件时插件会优先加载json格式的配置文件，否则将加载并生成[ini](https://zh.wikipedia.org/wiki/INI%E6%96%87%E4%BB%B6)格式的配置文件。
 - 基础配置文件 ```config.ini``` 或 ```config.json```
 	1. ini格式
