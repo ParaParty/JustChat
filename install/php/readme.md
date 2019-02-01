@@ -7,11 +7,9 @@
 1. 解压得到`JustChat PHP消息转发控制中心` 的代码
 1. 确保系统变量 `Path` 中存在 PHP 的路径
 1. 使用 [notepad++](https://notepad-plus-plus.org/) 或 [Sublime Text](http://www.sublimetext.com/) 或 记事本 或 gedit 或 vim 等文本编辑器修改**并保存**配置
-1. 执行命令  
-	```
-	php Applications\JustChat\start_register.php Applications\JustChat\start_gateway.php Applications\JustChat\start_businessworker.php
-	```
-- 执行 `start_for_win.bat` 文件亦可达到如上效果
+1. 运行本程序
+	1. Windows下执行 `start_for_win.bat`
+	1. Linux下执行 `php start.php start -d`
 		
 ## 配置
 - 配置文件 `Applications\JustChat\start_gateway.php`  
