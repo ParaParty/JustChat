@@ -28,7 +28,7 @@
 		1. `[server]server` 修改为`消息转发控制中心`的公网 IPv4 地址。
 		1. `[server]port` 修改为`消息转发控制中心`所侦听的端口号。
 		1. `[server]name` 修改为本 酷Q机器人 的名字。  
-		所有的 JustChat 客户端的名字**必须两两互不相同**
+		所有的 JustChat 客户端的名字**必须两两互不相同**。
 		1. `[config]groupid` 修改为当前机器人所作用的QQ群群号
 	1. 重启 酷Q ，使得修改后的配置文件生效。
 1. 搭设 [Minecraft Bukkit 服务端](../../install/bukkit/)
@@ -40,7 +40,7 @@
 		1. `serverIP` 修改为 `消息转发控制中心` 所侦听的公网 IPv4 地址。
 		1. `serverPort` 修改为 `消息转发控制中心` 所侦听的公网端口号。
 		1. `serverName` 修改为 本 Minecraft服务端 的名字。   
-		所有的 JustChat 客户端的名字**必须两两互不相同**
+		所有的 JustChat 客户端的名字**必须两两互不相同**。
 	1. 重启 Bukkit ，使得修改后的配置文件生效。
 1. 如果还有其他的 `酷Q服务端` 或 `Minecraft服务端` 需要搭设的话  
 重复 第三步 和 第四步 ，使得所有的 `酷Q机器人端` 和 `Minecraft服务端` 都成功连接到 `消息转发与处理中心`。
