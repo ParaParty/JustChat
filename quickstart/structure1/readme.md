@@ -15,6 +15,7 @@
 ### 准备工作
 	- 下载 [Bukkit](https://bukkit.org) 与 [CoolQ Air](https://cq.im/air) 备用。   
 	- `CoolQ Air` 为 CoolQ 的免费版，使用付费的 [CoolQ Pro](https://cq.im/pro) 依然可以正常使用本插件
+
 ### 搭设 [酷Q机器人端](../../install/coolq/)
 	1. 将cpk插件文件复制到酷Q插件目录: `app/` 。  
 	![](../image/cq_0.jpg)
@@ -29,6 +30,7 @@
 		1. `[server]port` 修改为本插件所侦听的端口号。
 		1. `[config]groupid` 修改为当前机器人所作用的QQ群群号
 	1. 重启 酷Q ，使得修改后的配置文件生效。
+
 ### 搭设 [Minecraft Bukkit 服务端](../../install/bukkit/)
 	1. 将jar插件文件复制到酷Q插件目录: `plugins/` 。  
 	![](../image/bukkit_0.jpg)
@@ -39,5 +41,6 @@
 		1. `serverPort` 修改为 `酷Q机器人端` 所侦听的公网端口号。
 		1. `serverName` 修改为 本 Minecraft服务端 的名字。
 	1. 重启 Bukkit ，使得修改后的配置文件生效。
+
 ### 搭设完成
 	- 开始享受愉快的聊天之旅吧~
