@@ -5,7 +5,7 @@
 - 本运作结构针对一游戏服务器与一群互通，适合大多数的用户使用。
 
 ## 运行模式
-- 我们再次看一下运行结构图，分析一下我们需要做些什么。</br>
+- 我们再次看一下运行结构图，分析一下我们需要做些什么。
 <img src="image/structure.svg" width="480"/>
 - 我们只需要关注红色部分即可。因为黑色部分已经是被别人做好的了~
 
@@ -16,12 +16,12 @@
 (```CoolQ Air``` 为 CoolQ 的免费版，使用付费的 [CoolQ Pro](https://cq.im/pro) 依然可以正常使用本插件)
 1. 搭设 酷Q机器人端
 	1. 将cpk插件文件复制到酷Q插件目录: ```app/``` 。
-	</br>![image/cq_0.jpg"]()
+	![image/cq_0.jpg"]()
 	1. 启动酷Q并启用本插件，生成初始配置文件。
-	</br>![image/cq_1.jpg"]()
+	![image/cq_1.jpg"]()
 	1. 在 ```data/app/com.superexercisebook.justchat/``` 或 ```app/com.superexercisebook.justchat/``` 中找到配置文件并按照您的喜好修改。
 	[配置文件格式介绍](../../install/coolq/#配置文件)
-	**注意： ```[server]mode``` 必须为 ```server``` **
+	注意： ```[server]mode``` 必须为 ```server``` 
 	```
 # 这是一个配置文件样例
 [server]
@@ -32,10 +32,10 @@ mode=server
 [config]
 groupid=您的MC服务器交流QQ群群号
 	```
-	1. 重启酷Q。
+	1. 重启 酷Q ，使得修改后的配置文件生效。
 1. 搭设 Minecraft Bukkit 服务端
 	1. 将jar插件文件复制到酷Q插件目录: ```plugins/``` 。
-	</br>![image/bukkit_0.jpg"]()
+	![image/bukkit_0.jpg"]()
 	1. 启动 Bukkit 服务端，生成初始配置文件。
 	1. 在 ```plugins/MultiRobot/```  中找到配置文件并按照您的喜好修改。
 	[配置文件格式介绍](../../install/bukkit/#配置文件)
@@ -80,3 +80,4 @@ imageY: 0.65
 #收到的信息在MC中的聊天前缀
 messageFormQQ: "[%world%]<%player%> "
 ```
+	1. 重启 Bukkit ，使得修改后的配置文件生效。
