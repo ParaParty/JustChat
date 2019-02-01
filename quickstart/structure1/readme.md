@@ -16,9 +16,9 @@
 (```CoolQ Air``` 为 CoolQ 的免费版，使用付费的 [CoolQ Pro](https://cq.im/pro) 依然可以正常使用本插件)
 1. 搭设 酷Q机器人端
 	1. 将cpk插件文件复制到酷Q插件目录: ```app/``` 。
-	![image/cq_0.jpg]()
+![](image/cq_0.jpg)
 	1. 启动酷Q并启用本插件，生成初始配置文件。
-	![image/cq_1.jpg]()
+![](image/cq_1.jpg)
 	1. 在 ```data/app/com.superexercisebook.justchat/``` 或 ```app/com.superexercisebook.justchat/``` 中找到配置文件并按照您的喜好修改。
 	[配置文件格式介绍](../../install/coolq/#配置文件)
 	注意： ```[server]mode``` 必须为 ```server``` 
@@ -35,7 +35,7 @@ groupid=您的MC服务器交流QQ群群号
 	1. 重启 酷Q ，使得修改后的配置文件生效。
 1. 搭设 Minecraft Bukkit 服务端
 	1. 将jar插件文件复制到酷Q插件目录: ```plugins/``` 。
-	![image/bukkit_0.jpg]()
+![](image/bukkit_0.jpg)
 	1. 启动 Bukkit 服务端，生成初始配置文件。
 	1. 在 ```plugins/MultiRobot/```  中找到配置文件并按照您的喜好修改。
 	[配置文件格式介绍](../../install/bukkit/#配置文件)
