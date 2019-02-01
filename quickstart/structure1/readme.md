@@ -13,16 +13,16 @@
 - 我们以 [Bukkit](../../install/bukkit) 与 [CoolQ](../../install/coolq) 为例。
 - 在这个运行结构中。 酷Q机器人端设为JustChat服务端，Minecraft服务器端设为JustChat客户端。
 1. 先下载好 [Bukkit](https://bukkit.org) 与 [CoolQ Air](https://cq.im/air) 备用。 
-(```CoolQ Air``` 为 CoolQ 的免费版，使用付费的 [CoolQ Pro](https://cq.im/pro) 依然可以正常使用本插件)
+(`CoolQ Air` 为 CoolQ 的免费版，使用付费的 [CoolQ Pro](https://cq.im/pro) 依然可以正常使用本插件)
 1. 搭设 酷Q机器人端
-	1. 将cpk插件文件复制到酷Q插件目录: ```app/``` 。
+	1. 将cpk插件文件复制到酷Q插件目录: `app/` 。
 ![](image/cq_0.jpg)
 	1. 启动酷Q并启用本插件，生成初始配置文件。
 ![](image/cq_1.jpg)
-	1. 在 ```data/app/com.superexercisebook.justchat/``` 或 ```app/com.superexercisebook.justchat/``` 中找到配置文件并按照您的喜好修改。
+	1. 在 `data/app/com.superexercisebook.justchat/` 或 `app/com.superexercisebook.justchat/` 中找到配置文件并按照您的喜好修改。
 	[配置文件格式介绍](../../install/coolq/#配置文件)
-	注意： ```[server]mode``` 必须为 ```server``` 
-	```
+	注意： `[server]mode` 必须为 `server`
+```
 # 这是一个配置文件样例
 [server]
 ip=0.0.0.0
@@ -31,13 +31,13 @@ mode=server
 
 [config]
 groupid=您的MC服务器交流QQ群群号
-	```
+```
 	1. 重启 酷Q ，使得修改后的配置文件生效。
 1. 搭设 Minecraft Bukkit 服务端
-	1. 将jar插件文件复制到酷Q插件目录: ```plugins/``` 。
+	1. 将jar插件文件复制到酷Q插件目录: `plugins/` 。
 ![](image/bukkit_0.jpg)
 	1. 启动 Bukkit 服务端，生成初始配置文件。
-	1. 在 ```plugins/MultiRobot/```  中找到配置文件并按照您的喜好修改。
+	1. 在 `plugins/MultiRobot/`  中找到配置文件并按照您的喜好修改。
 	[配置文件格式介绍](../../install/bukkit/#配置文件)
 ```
 # 这是一个配置文件样例
