@@ -1,17 +1,20 @@
 # [安装与架设](../)/PHP消息转发控制中心
 ## 概述
-- ```JustChat PHP消息转发控制中心``` 用于接受来自其他 ```JustChat 客户端``` 的消息并处理转发到其他的 ```JustChat 客户端```。
+- `JustChat PHP消息转发控制中心` 用于接受来自其他 `JustChat 客户端` 的消息并处理转发到其他的 `JustChat 客户端`。
 
 ## 安装
 1. [下载插件](https://github.com/ExerciseBook/JustChat/releases/)
-1. 解压得到```JustChat PHP消息转发控制中心``` 的代码
-1. 确保系统变量 ```Path``` 中存在 PHP 的路径
+1. 解压得到`JustChat PHP消息转发控制中心` 的代码
+1. 确保系统变量 `Path` 中存在 PHP 的路径
 1. 使用 [notepad++](https://notepad-plus-plus.org/) 或 [Sublime Text](http://www.sublimetext.com/) 或 记事本 或 gedit 或 vim 等文本编辑器修改**并保存**配置
-1. 执行命令 ```php Applications\JustChat\start_register.php Applications\JustChat\start_gateway.php Applications\JustChat\start_businessworker.php```
-	-执行 ```start_for_win.bat``` 文件亦可达到如上效果\
+1. 执行命令  
+```
+php Applications\JustChat\start_register.php Applications\JustChat\start_gateway.php Applications\JustChat\start_businessworker.php
+```
+- 执行 `start_for_win.bat` 文件亦可达到如上效果
 	
 ## 配置
-- 配置文件 ```Applications\JustChat\start_gateway.php```
+- 配置文件 `Applications\JustChat\start_gateway.php`
 ```
 // gateway 进程，这里使用Text协议，可以用telnet测试
 // 既 JustChat PHP消息转发控制中心 所侦听的ip地址与端口
