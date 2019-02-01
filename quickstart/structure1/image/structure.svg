@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 480 320" style="enable-background:new 0 0 480 320;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FF0000;}
+	.st1{font-family:'SourceHanSerifSC-Regular-GBpc-EUC-H';}
+	.st2{font-size:22px;}
+	.st3{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#FF0000;stroke-miterlimit:10;}
+</style>
+<text transform="matrix(1 0 0 1 69.9719 78.1411)" class="st0 st1 st2">QQ机器人</text>
+<text transform="matrix(1 0 0 1 231.6375 78.1409)" class="st0 st1 st2">Minecraft 服务器</text>
+<text transform="matrix(1 0 0 1 91.9719 158.1411)" class="st1 st2">QQ群</text>
+<text transform="matrix(1 0 0 1 69.9724 238.1409)" class="st1 st2">QQ群成员</text>
+<text transform="matrix(1 0 0 1 275.9998 238.1411)" class="st1 st2">游戏玩家</text>
+<g>
+	<g>
+		<line class="st3" x1="120" y1="91" x2="120" y2="129"/>
+		<g>
+			<path d="M120,85c-1.1,2.8-2.9,6.4-4.8,8.5l4.8-1.7l4.8,1.7C122.9,91.4,121.1,87.8,120,85z"/>
+		</g>
+		<g>
+			<path d="M120,135c-1.1-2.8-2.9-6.4-4.8-8.5l4.8,1.7l4.8-1.7C122.9,128.6,121.1,132.2,120,135z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st3" x1="120" y1="171" x2="120" y2="209"/>
+		<g>
+			<path d="M120,165c-1.1,2.8-2.9,6.4-4.8,8.5l4.8-1.7l4.8,1.7C122.9,171.4,121.1,167.8,120,165z"/>
+		</g>
+		<g>
+			<path d="M120,215c-1.1-2.8-2.9-6.4-4.8-8.5l4.8,1.7l4.8-1.7C122.9,208.6,121.1,212.2,120,215z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st3" x1="320" y1="96" x2="320" y2="204"/>
+		<g>
+			<path d="M320,90c-1.1,2.8-2.9,6.4-4.8,8.5l4.8-1.7l4.8,1.7C322.9,96.4,321.1,92.8,320,90z"/>
+		</g>
+		<g>
+			<path d="M320,210c-1.1-2.8-2.9-6.4-4.8-8.5l4.8,1.7l4.8-1.7C322.9,203.6,321.1,207.2,320,210z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st4" x1="224" y1="70" x2="176" y2="70"/>
+		<g>
+			<path class="st0" d="M230,70c-2.8-1.1-6.4-2.9-8.5-4.8l1.7,4.8l-1.7,4.8C223.6,72.9,227.2,71.1,230,70z"/>
+		</g>
+		<g>
+			<path class="st0" d="M170,70c2.8-1.1,6.4-2.9,8.5-4.8l-1.7,4.8l1.7,4.8C176.4,72.9,172.8,71.1,170,70z"/>
+		</g>
+	</g>
+</g>
+</svg>
