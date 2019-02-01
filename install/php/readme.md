@@ -14,7 +14,7 @@
 - 执行 `start_for_win.bat` 文件亦可达到如上效果
 		
 ## 配置
-	- 配置文件 `Applications\JustChat\start_gateway.php`  
+- 配置文件 `Applications\JustChat\start_gateway.php`  
 	```
 	// gateway 进程，这里使用Text协议，可以用telnet测试
 	// 既 JustChat PHP消息转发控制中心 所侦听的ip地址与端口
