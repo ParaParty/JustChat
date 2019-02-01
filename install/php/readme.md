@@ -8,14 +8,14 @@
 1. 确保系统变量 `Path` 中存在 PHP 的路径
 1. 使用 [notepad++](https://notepad-plus-plus.org/) 或 [Sublime Text](http://www.sublimetext.com/) 或 记事本 或 gedit 或 vim 等文本编辑器修改**并保存**配置
 1. 执行命令  
-```
+	```
 php Applications\JustChat\start_register.php Applications\JustChat\start_gateway.php Applications\JustChat\start_businessworker.php
-```
+	```
 - 执行 `start_for_win.bat` 文件亦可达到如上效果
 	
 ## 配置
 - 配置文件 `Applications\JustChat\start_gateway.php`  
-```
+	```
 // gateway 进程，这里使用Text协议，可以用telnet测试
 // 既 JustChat PHP消息转发控制中心 所侦听的ip地址与端口
 $gateway = new Gateway("JustChat://0.0.0.0:8282");
@@ -32,4 +32,4 @@ $gateway->lanIp = '127.0.0.1';
 // 内部通讯起始端口，假如$gateway->count=4，起始端口为4000
 // 则一般会使用4000 4001 4002 4003 4个端口作为内部通讯端口 
 $gateway->startPort = 2900;
-```
+	```
