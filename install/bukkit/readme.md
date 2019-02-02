@@ -1,5 +1,4 @@
 # [安装与架设](../)/Minecraft Bukkit 服务端
-- [MCBBS发布帖](http://www.mcbbs.net/thread-840749-1-1.html)
 
 ## 概述
 - ```JustChat Minecraft Bukkit 客户端```用于接受与发送Minecraft聊天消息以供玩家与```JustChat QQ机器人端```或```JustChat 消息转发控制中心```等使用。

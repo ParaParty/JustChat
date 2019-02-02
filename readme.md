@@ -29,3 +29,11 @@
 ## 反馈与支持
 - 直接在本repo中发起issue即可。
 - <img src="https://wx1.sinaimg.cn/large/8ddab624ly1fwzu4luz6oj20f00f0q3k.jpg" width="240"/>
+
+## 本插件在其他地方的发布地址
+- MCBBS
+	- Bukkit端 : <http://www.mcbbs.net/thread-840749-1-1.html>
+	- Sponge端 : <http://www.mcbbs.net/thread-841495-1-1.html>
+- VexView
+	- Bukkit端 : <https://www.vexview.net/index.php?resources/24/>
+- CoolQ : <https://cqp.cc/t/41412>
