@@ -28,7 +28,7 @@
 1. 在 `data/app/com.superexercisebook.justchat/` 或 `app/com.superexercisebook.justchat/` 中找到配置文件并按照您的喜好修改。  
 [配置文件格式介绍](../../install/coolq/#配置文件)  
 	1. `[server]mode` 修改为 `client` 使得本插件以客户端模式运行。
-	1. `[server]server` 修改为`消息转发控制中心`的公网 IPv4 地址。
+	1. `[server]ip` 修改为`消息转发控制中心`的公网 IPv4 地址。
 	1. `[server]port` 修改为`消息转发控制中心`所侦听的端口号。
 	1. `[server]name` 修改为本 酷Q机器人 的名字。  
 	所有的 JustChat 客户端的名字**必须两两互不相同**。

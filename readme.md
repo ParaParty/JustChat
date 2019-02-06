@@ -28,6 +28,7 @@
 
 ## 反馈与支持
 - 直接在本repo中发起issue即可。
+- 聊天QQ群 : 𝟓𝟕𝟔𝟒𝟗𝟑𝟑𝟕𝟑
 - <img src="https://wx1.sinaimg.cn/large/8ddab624ly1fwzu4luz6oj20f00f0q3k.jpg" width="240"/>
 
 ## 本插件在其他地方的发布地址
