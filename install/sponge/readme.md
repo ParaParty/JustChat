@@ -13,7 +13,7 @@
 ## 配置文件
 - 基础配置文件 ```config.conf```
 	```
-#The server config
+#服务器设置
 server {
 	# 本客户端的编号（随机生成）
 	ID="f4b26361-0e49-4940-ba2a-05990cd2c6f1"
