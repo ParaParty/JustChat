@@ -16,7 +16,7 @@
 - 基础配置文件 ```config.ini``` 或 ```config.json```
 	1. ini格式
 	```
-#通用设置
+#基础配置
 [server]
 # 插件运作模式
 # 服务端模式(server) : 本插件开放端口以供其他JustChat客户端连接。
@@ -35,9 +35,25 @@ ID=909431a3-d430-4cdb-b3c1-5cf3dc8f556e
 name=My QQ Group
 # 当插件为客户端模式时本设置有效，为客户端心跳包的时间间隔。0为关闭。(单位:秒)
 pulseInterval=20
+
+#一般设置
 [config]
 # 欲将本插件于何群使用
 groupid=123456789
+
+#消息开关
+[events]
+# 服务器通告类 消息开关
+Info_all=true
+# 服务器通告类 玩家上下线 消息开关
+Info_network=true
+# 服务器公告类 玩家死亡 消息开关
+Info_playerDeath=true
+# 服务器公告类 除了玩家上下线与玩家死亡的其他所有消息 消息开关
+Info_other=true
+# 查询当前在线玩家列表
+playerList=true
+
 	```
 	1. json格式
 	```
@@ -52,6 +68,13 @@ groupid=123456789
   },
   "config" : {
 	"groupid" : 123456789
+  },
+  "events" : {
+    "Info_all" : true,
+    "Info_Network" : true,
+    "Info_PlayerDeath" : true,
+    "Info_other" : true,
+    "playerList" : true
   }
 }
 	```
@@ -59,21 +82,48 @@ groupid=123456789
 	1. ini格式
 	```
 [message]
+# 服务器通告 一般输出格式
+Msg_INFO_General=[%SERVER%] %CONTENT%
+
 # 当玩家加入游戏时，并未有接收到现成输出内容，机器人发往群中的消息的格式。
-Msg_INFO_Join=%SENDER% joined the game.
+Msg_INFO_Join=[%SERVER%] %SENDER% joined the game.
+
 # 当玩家退出游戏时，并未有接收到现成输出内容，机器人发往群中的消息的格式。
-Msg_INFO_Disconnect=%SENDER% left the game.
+Msg_INFO_Disconnect=[%SERVER%] %SENDER% left the game.
+
 # 当玩家死亡时，并未有接收到现成输出内容，机器人发往群中的消息的格式。
-Msg_INFO_PlayerDead=%SENDER% dead.
+Msg_INFO_PlayerDead=[%SERVER%] %SENDER% dead.
+
 # 当玩家发言时，机器人往群众发送的消息的格式。
-Msg_Text_Overview=[*][%WORLD_DISPLAY%]%SENDER%: %CONTENT%
+Msg_Text_Overview=[*][%SERVER%][%WORLD_DISPLAY%]%SENDER%= %CONTENT%
+
+# 查询当前在线玩家列表
+Msg_Server_Playerlist=[%SERVER%] There are %NOW%/%MAX% players online.
+
+# 服务器连接成功提示
+Event_online=Server %NAME% is now online.
+
+# 服务器断开连接提示
+Event_offline=Server %NAME% is now offline.
+
 	```
 	1. json格式
 	```
 {
-	"Msg_INFO_Join": "%SENDER% joined the game.",
-	"Msg_INFO_Disconnect": "%SENDER% left the game.",
-	"Msg_INFO_PlayerDead": "%SENDER% dead.",
-	"Msg_Text_Overview": "[*][%WORLD_DISPLAY%]%SENDER%: %CONTENT%"
+  "Msg_INFO_General" : "[%SERVER%] %CONTENT%",
+  "Msg_INFO_Join" : "[%SERVER%] %SENDER% joined the game.",
+  "Msg_INFO_Disconnect" : "[%SERVER%] %SENDER% left the game.",
+  "Msg_INFO_PlayerDead" : "[%SERVER%] %SENDER% dead.",
+  "Msg_Text_Overview" : "[*][%SERVER%][%WORLD_DISPLAY%]%SENDER%: %CONTENT%",
+  "Msg_Server_Playerlist" : "[%SERVER%] There are %NOW%\/%MAX% players online.",
+  "Event_online" : "Server %NAME% is now online.",
+  "Event_offline" : "Server %NAME% is now offline."
 }
 	```
+	
+## 命令
+
+### 查询在线玩家列表
+1. 支持版本: `1.2.0` 到 `未定`
+1. 命令: `/list`, `/ls`, `!list`, `!ls`
+1. 权限: 全体群成员
