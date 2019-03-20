@@ -15,7 +15,7 @@
 - 当存在[json](https://json.org)格式的配置文件时插件会优先加载json格式的配置文件，否则将加载并生成[ini](https://zh.wikipedia.org/wiki/INI%E6%96%87%E4%BB%B6)格式的配置文件。
 - 基础配置文件 `config.ini` 或 `config.json`
 	1. ini格式
-	```
+```
 #基础配置
 [server]
 # 插件运作模式
@@ -53,9 +53,9 @@ Info_playerDeath=true
 Info_other=true
 # 查询当前在线玩家列表
 playerList=true
-	```
+```
 	1. json格式
-	```
+```
 {
   "server" : {
 	"mode" : "server",
@@ -76,10 +76,10 @@ playerList=true
     "playerList" : true
   }
 }
-	```
+```
 - 消息输出格式 `config.ini` 或 `config.json`
 	1. ini格式
-	```
+```
 [message]
 # 服务器通告 一般输出格式
 Msg_INFO_General=[%SERVER%] %CONTENT%
@@ -104,9 +104,9 @@ Event_online=Server %NAME% is now online.
 
 # 服务器断开连接提示
 Event_offline=Server %NAME% is now offline.
-	```
+```
 	1. json格式
-	```
+```
 {
   "Msg_INFO_General" : "[%SERVER%] %CONTENT%",
   "Msg_INFO_Join" : "[%SERVER%] %SENDER% joined the game.",
@@ -117,7 +117,7 @@ Event_offline=Server %NAME% is now offline.
   "Event_online" : "Server %NAME% is now online.",
   "Event_offline" : "Server %NAME% is now offline."
 }
-	```
+```
 	
 ## 命令
 
