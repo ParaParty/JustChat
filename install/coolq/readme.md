@@ -1,7 +1,7 @@
 # [安装与架设](../)/QQ机器人 酷Q机器人
 
 ## 概述
-- ```JustChat 酷Q机器人端```用于接受与发送QQ群消息以供群员与```JustChat Minecraft服务器端```或```JustChat 消息转发控制中心```等使用。
+- `JustChat 酷Q机器人端`用于接受与发送QQ群消息以供群员与`JustChat Minecraft服务器端`或`JustChat 消息转发控制中心`等使用。
 
 ## 安装
 1. [下载插件](https://github.com/ExerciseBook/JustChat/releases/)
@@ -13,7 +13,7 @@
 ## 配置文件
 - 本插件使用的配置文档均以**UTF-8无BOM**形式储存。
 - 当存在[json](https://json.org)格式的配置文件时插件会优先加载json格式的配置文件，否则将加载并生成[ini](https://zh.wikipedia.org/wiki/INI%E6%96%87%E4%BB%B6)格式的配置文件。
-- 基础配置文件 ```config.ini``` 或 ```config.json```
+- 基础配置文件 `config.ini` 或 `config.json`
 	1. ini格式
 	```
 #基础配置
@@ -77,7 +77,7 @@ playerList=true
   }
 }
 	```
-- 消息输出格式 ```config.ini``` 或 ```config.json```
+- 消息输出格式 `config.ini` 或 `config.json`
 	1. ini格式
 	```
 [message]
@@ -104,7 +104,6 @@ Event_online=Server %NAME% is now online.
 
 # 服务器断开连接提示
 Event_offline=Server %NAME% is now offline.
-
 	```
 	1. json格式
 	```
