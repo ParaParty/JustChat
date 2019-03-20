@@ -53,7 +53,6 @@ Info_playerDeath=true
 Info_other=true
 # 查询当前在线玩家列表
 playerList=true
-
 	```
 	1. json格式
 	```
