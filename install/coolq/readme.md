@@ -2,7 +2,6 @@
 
 ## 概述
 - `JustChat 酷Q机器人端`用于接受与发送QQ群消息以供群员与`JustChat Minecraft服务器端`或`JustChat 消息转发控制中心`等使用。
-- 若本页内容格式错乱麻烦移步 <https://github.com/ExerciseBook/JustChat/tree/master/install/coolq> 阅读。
 
 ## 安装
 1. [下载插件](https://github.com/ExerciseBook/JustChat/releases/)
@@ -36,13 +35,13 @@
 	name=My QQ Group
 	# 当插件为客户端模式时本设置有效，为客户端心跳包的时间间隔。0为关闭。(单位:秒)
 	pulseInterval=20
-	
+	#
 	# 一般设置
 	[config]
 	# 欲将本插件于何群使用
 	groupid=123456789
-	
 	# 消息与功能开关
+	#
 	[events]
 	# 服务器通告类 消息开关
 	Info_all=true
@@ -84,25 +83,25 @@
 	[message]
 	# 服务器通告 一般输出格式
 	Msg_INFO_General=[%SERVER%] %CONTENT%
-		
+	#
 	# 当玩家加入游戏时，并未有接收到现成输出内容，机器人发往群中的消息的格式。
 	Msg_INFO_Join=[%SERVER%] %SENDER% joined the game.
-		
+	#
 	# 当玩家退出游戏时，并未有接收到现成输出内容，机器人发往群中的消息的格式。
 	Msg_INFO_Disconnect=[%SERVER%] %SENDER% left the game.
-		
+	#
 	# 当玩家死亡时，并未有接收到现成输出内容，机器人发往群中的消息的格式。
 	Msg_INFO_PlayerDead=[%SERVER%] %SENDER% dead.
-		
+	#
 	# 当玩家发言时，机器人往群众发送的消息的格式。
 	Msg_Text_Overview=[*][%SERVER%][%WORLD_DISPLAY%]%SENDER%= %CONTENT%
-		
+	#
 	# 查询当前在线玩家列表
 	Msg_Server_Playerlist=[%SERVER%] There are %NOW%/%MAX% players online.
-		
+	#
 	# 服务器连接成功提示
 	Event_online=Server %NAME% is now online.
-		
+	#
 	# 服务器断开连接提示
 	Event_offline=Server %NAME% is now offline.
 	```
