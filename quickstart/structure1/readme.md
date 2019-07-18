@@ -13,8 +13,8 @@
 - 我们以 [Bukkit](../../install/bukkit/) 与 [CoolQ](../../install/coolq/) 为例。
 - 在这个运行结构中。 酷Q机器人端设为JustChat服务端，Minecraft服务器端设为JustChat客户端。
 ### 准备工作
-- 下载 [Bukkit](https://bukkit.org) 与 [CoolQ Air](https://cq.im/air) 备用。   
-- `CoolQ Air` 为 CoolQ 的免费版，使用付费的 [CoolQ Pro](https://cq.im/pro) 依然可以正常使用本插件
+- 下载 [Bukkit](https://bukkit.org) 与 [CoolQ Air](https://cqp.im/air) 备用。   
+- `CoolQ Air` 为 CoolQ 的免费版，使用付费的 [CoolQ Pro](https://cqp.im/pro) 依然可以正常使用本插件
 
 ### 搭设 [酷Q机器人端](../../install/coolq/)
 1. 将cpk插件文件复制到酷Q插件目录: `app/` 。  

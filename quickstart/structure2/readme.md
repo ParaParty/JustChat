@@ -13,8 +13,8 @@
 - 我们以 [消息转发控制中心](../../install/php/) 和 一个[Bukkit](../../install/bukkit/) 与 一个[CoolQ](../../install/coolq/) 为例。
 - 在这个运行结构中。 消息转发控制中心设为JustChat服务端，其余全部设为JustChat客户端。
 ### 准备工作
-- [Bukkit](https://bukkit.org) 与 [CoolQ Air](https://cq.im/air) 备用。   
-- `CoolQ Air` 为 CoolQ 的免费版，使用付费的 [CoolQ Pro](https://cq.im/pro) 依然可以正常使用本插件
+- [Bukkit](https://bukkit.org) 与 [CoolQ Air](https://cqp.im/air) 备用。   
+- `CoolQ Air` 为 CoolQ 的免费版，使用付费的 [CoolQ Pro](https://cqp.im/pro) 依然可以正常使用本插件
 
 ### 搭设 [消息转发控制中心](../../install/php)
 1. 我们假设您已经下载好 [php](http://www.php.net/) 并将运行环境配置完毕。
