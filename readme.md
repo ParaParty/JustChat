@@ -11,25 +11,19 @@
 - 提供了多种运行模式，使用灵活，扩展性高。
 
 ## 运行结构示意图
-<img src="image/structure1.svg" width="480"/>  
-<img src="image/structure2.svg" width="480"/>  
-<img src="image/structure3.svg" width="480"/>
+<img src="image/structure.svg" width="480"/>  
 
 ## 安装与架设
-- [PHP消息转发控制中心](install/php)
 - [QQ机器人 酷Q机器人](install/coolq)
 - [Minecraft Bukkit 服务端](install/bukkit)
 - [Minecraft Sponge 服务端](install/sponge)
-- <img src="https://wx2.sinaimg.cn/large/8ddab624ly1fwzu4lofwbg203o03kwjm.gif" width="240"/>
 
 ## 快速搭建
 - [机器人 - Minecraft 模式](quickstart/structure1)
-- [机器人 - 消息转发与处理中心 - Minecraft 模式](quickstart/structure2)
 
 ## 反馈与支持
 - 直接在本repo中发起issue即可。
 - 聊天QQ群 : 𝟓𝟕𝟔𝟒𝟗𝟑𝟑𝟕𝟑
-- <img src="https://wx1.sinaimg.cn/large/8ddab624ly1fwzu4luz6oj20f00f0q3k.jpg" width="240"/>
 
 ## 本插件在其他地方的发布地址
 - MCBBS

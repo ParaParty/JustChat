@@ -1,7 +1,15 @@
 # [安装与架设](../)/QQ机器人 酷Q机器人
 
 ## 概述
-- `JustChat 酷Q机器人端`用于接受与发送QQ群消息以供群员与`JustChat Minecraft服务器端`或`JustChat 消息转发控制中心`等使用。
+- JustChat 的核心协议和路由模块均写在酷Q机器人插件中。
+
+## 特性
+- 服务组 : 允许将多个 QQ 群和多个 Minecraft 服务器的聊天信息转发到一起。
+- 设置隔离 : 允许不同群和不同服务组使用不同的 JustChat 设置。
+- 内容隔离 : 允许一个机器人同时为多个不同的服务组提供服务。
+
+## 升级
+- 如果您是从 `1.x` 版本升级而来，因插件配置文件改动较大，无法自动升级。请先备份原有设置文件，清理设置目录后再升级插件。
 
 ## 安装
 1. [下载插件](https://github.com/ExerciseBook/JustChat/releases/)
@@ -12,112 +20,160 @@
 
 ## 配置文件
 - 本插件使用的配置文档均以**UTF-8无BOM**形式储存。
-- 当存在[json](https://json.org)格式的配置文件时插件会优先加载json格式的配置文件，否则将加载并生成[ini](https://zh.wikipedia.org/wiki/INI%E6%96%87%E4%BB%B6)格式的配置文件。
-- 基础配置文件 `config.ini` 或 `config.json`
-1. ini格式
-	```
-	# 基础配置
-	[server]
-	# 插件运作模式
-	# 服务端模式(server) : 本插件开放端口以供其他JustChat客户端连接。
-	# 客户端模式(client) : 连接到其他的JustChat服务端。
-	mode=server
-	# 当插件为服务端模式时为绑定侦听的本地IPv4地址，若为0.0.0.0既是侦听所有ip。如果不清楚本设置填写什么，填写0.0.0.0即可。
-	# 当插件为客户端模式时为欲连接的服务器的IPv4地址。
-	# IPv6:咕咕
-	ip=0.0.0.0
-	# 当插件为服务端模式时为绑定侦听的本地端口号。
-	# 当插件为客户端模式时为欲连接的服务器的端口号。
-	port=54321
-	# 当插件为客户端模式时本设置有效，为本客户端的编号。（随机生成）
-	ID=909431a3-d430-4cdb-b3c1-5cf3dc8f556e
-	# 当插件为客户端模式时本设置有效，为本客户端的名称。
-	name=My QQ Group
-	# 当插件为客户端模式时本设置有效，为客户端心跳包的时间间隔。0为关闭。(单位:秒)
-	pulseInterval=20
-	#
-	# 一般设置
-	[config]
-	# 欲将本插件于何群使用
-	groupid=123456789
-	# 消息与功能开关
-	#
-	[events]
-	# 服务器通告类 消息开关
-	Info_all=true
-	# 服务器通告类 玩家上下线 消息开关
-	Info_network=true
-	# 服务器公告类 玩家死亡 消息开关
-	Info_playerDeath=true
-	# 服务器公告类 除了玩家上下线与玩家死亡的其他所有消息 消息开关
-	Info_other=true
-	# 查询当前在线玩家列表
-	playerList=true
-	```
-1. json格式
-	```
-	{
-	  "server" : {
-		"mode" : "server",
-		"ip" : "0.0.0.0",
-		"port" : 54321,
-		"ID" : "909431a3-d430-4cdb-b3c1-5cf3dc8f556e",
-		"name" : "My QQ Group",
-		"pulseInterval" : 20
-	  },
-	  "config" : {
-		"groupid" : 123456789
-	  },
-	  "events" : {
-		"Info_all" : true,
-		"Info_Network" : true,
-		"Info_PlayerDeath" : true,
-		"Info_other" : true,
-		"playerList" : true
-	  }
+- 基础配置文件 `config.json`
+<details>
+  <summary>json 格式</summary>
+
+```jsonc
+{
+	/// 配置文件版本
+	"version": {
+		"config": 2 
+	},
+
+	/// JustChat 连接服务设置
+	"connection": {
+
+		/// 服务器模式设置
+		"server": {
+			"enable": true,
+			"port": 38440
+		},
+
+		/// 客户端模式设置 (暂未支持)
+		"client": {
+			"enable": false,
+			"address": "",
+			"port": 38440,
+			"pulse_interval": 20
+		},
+
+		"name": "", // 本终端名称
+		"ID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" // 本终端编号 ( UUID 格式 )
+	},
+
+	/// 服务组设置
+	"services": [
+		
+		/// 一个服务组
+		{
+			/// 这个服务组的绑定设置
+			"bind": {
+				/// 和哪些QQ群绑定
+				"qqgroups": [
+					123456, xxxxxx
+				],
+				/// 和哪些 Minecraft 服务器绑定，依然是 UUID 格式
+				"minecraft": [
+					"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+				]
+			},
+			/// 这个服务组的特殊设置，具体介绍见后文
+			"events": {
+				"PlayerList_All": false // 这里覆盖了全局设置里的一个开关
+			}
+			"message_format": {
+				"INFO_PlayerJoin": "[%SERVER%] %SENDER% 来搬砖辣！",
+				"INFO_PlayerDisconnect": "[%SERVER%] %SENDER% 退出搬砖。"
+			}
+		},
+
+		/// 另一个服务组
+		{
+			"bind": {
+				"qqgroups": [
+					xxxxxx
+				],
+				"minecraft": [
+					"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+				]
+			},
+			"message_format": {
+				"Message_Overview": "[*][%WORLD_DISPLAY%]%SENDER%: %CONTENT%"
+			}
+		}
+	],
+
+	/// 对于QQ群的特殊设置
+	"qqgroups": [
+		/// 一个QQ群的特殊设置
+		{
+			"groupid": 123456,
+			"config": {
+				"events": {
+					"PlayerList_All": true // 这里覆盖了一个服务组设置里的一个开关
+				},
+				"message_format": {
+					"Message_Overview": "[*][%WORLD_DISPLAY%]%SENDER%: %CONTENT%"
+				}
+			}
+		}
+	],
+
+	/// 全局设置
+	"global_configuration": {
+		/// 设置开关
+		"events": {
+			"Registration_All": true,
+			"Info_all": true,
+			"Info_Network": true,
+			"Info_PlayerDeath": true,
+			"Info_other": true,
+			"Message_All": true,
+			"PlayerList_All": true
+		},
+		/// 消息输出格式
+		"message_format": {
+			"INFO_General": "[%SERVER%] %CONTENT%",
+			"INFO_PlayerJoin": "[%SERVER%] %SENDER% joined the game.",
+			"INFO_PlayerDisconnect": "[%SERVER%] %SENDER% left the game.",
+			"INFO_PlayerDead": "[%SERVER%] %SENDER% dead.",
+			"Message_Overview": "[*][%SERVER%][%WORLD_DISPLAY%]%SENDER%: %CONTENT%",
+			"PlayerList_Layout": "[%SERVER%] There are %NOW%/%MAX% players online.%PLAYERS_LIST%",
+			"Registration_online": "Server %NAME% is now online.",
+			"Registration_offline": "Server %NAME% is now offline."
+		}
 	}
-	```
-- 消息输出格式 `config.ini` 或 `config.json`
-1. ini格式
-	```
-	[message]
-	# 服务器通告 一般输出格式
-	Msg_INFO_General=[%SERVER%] %CONTENT%
-	#
-	# 当玩家加入游戏时，并未有接收到现成输出内容，机器人发往群中的消息的格式。
-	Msg_INFO_Join=[%SERVER%] %SENDER% joined the game.
-	#
-	# 当玩家退出游戏时，并未有接收到现成输出内容，机器人发往群中的消息的格式。
-	Msg_INFO_Disconnect=[%SERVER%] %SENDER% left the game.
-	#
-	# 当玩家死亡时，并未有接收到现成输出内容，机器人发往群中的消息的格式。
-	Msg_INFO_PlayerDead=[%SERVER%] %SENDER% dead.
-	#
-	# 当玩家发言时，机器人往群众发送的消息的格式。
-	Msg_Text_Overview=[*][%SERVER%][%WORLD_DISPLAY%]%SENDER%= %CONTENT%
-	#
-	# 查询当前在线玩家列表
-	Msg_Server_Playerlist=[%SERVER%] There are %NOW%/%MAX% players online.
-	#
-	# 服务器连接成功提示
-	Event_online=Server %NAME% is now online.
-	#
-	# 服务器断开连接提示
-	Event_offline=Server %NAME% is now offline.
-	```
-1. json格式
-	```
-	{
-	  "Msg_INFO_General" : "[%SERVER%] %CONTENT%",
-	  "Msg_INFO_Join" : "[%SERVER%] %SENDER% joined the game.",
-	  "Msg_INFO_Disconnect" : "[%SERVER%] %SENDER% left the game.",
-	  "Msg_INFO_PlayerDead" : "[%SERVER%] %SENDER% dead.",
-	  "Msg_Text_Overview" : "[*][%SERVER%][%WORLD_DISPLAY%]%SENDER%: %CONTENT%",
-	  "Msg_Server_Playerlist" : "[%SERVER%] There are %NOW%\/%MAX% players online.",
-	  "Event_online" : "Server %NAME% is now online.",
-	  "Event_offline" : "Server %NAME% is now offline."
-	}
-	```
+}
+```
+</details>
+
+### 设置
+
+#### 设置开关
+- 不区分大小写
+
+|        Key         |        Type        |            描述            |                相关输出格式                     |
+|:------------------ |:------------------:|:------------------------- |:--------------------------------------------- |
+| Registration_All   | `boolean`          | 服务器上下线提示             | `Registration_online`, `Registration_offline` |
+| Info_All           | `boolean`          | [提示] 提示开关              | 所有以 `info` 开头的输出格式*                    |
+| Info_PlayerNetwork | `boolean`          | [提示] 玩家上下线提示         | `INFO_PlayerJoin`, `INFO_PlayerDisconnect`    |
+| Info_PlayerDeath   | `boolean`          | [提示] 玩家死亡提示           | `INFO_PlayerDead`                            |
+| Info_Other         | `boolean`          | [提示] 其他提示              | `INFO_General`                                |
+| Message_All        | `boolean`          | 聊天信息显示                | `Message_Overview`                            |
+| PlayerList_All     | `boolean`          | 查询在线玩家列表开关         | `PlayerList_Layout`                           |
+
+```
+* 由于数据包中可能存在预设文本，因而 Info 开头的输出格式可能会被数据包中的预设文本覆盖。
+```
+
+
+#### 消息输出格式
+- `key` 不区分大小写
+- 默认值参考上文中的配置文件样例。
+
+|        Key            |            描述            |
+|:--------------------- |:--------------------------|
+| INFO_General          | [提示] 通用提示输出格式      |
+| INFO_PlayerJoin       | [提示] 玩家加入游戏提示      |
+| INFO_PlayerDisconnect | [提示] 玩家退出游戏提示      |
+| INFO_PlayerDead       | [提示] 玩家死亡提示         |
+| Message_Overview      | 聊天信息显示               |
+| PlayerList_Layout     | 在线玩家列表输出格式         |
+| Registration_online   | 服务器上线提示               |
+| Registration_offline  | 服务器下线提示               |
+
+
 
 ## 命令
 
