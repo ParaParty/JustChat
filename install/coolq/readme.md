@@ -44,8 +44,7 @@
 		"client": {
 			"enable": false,
 			"address": "",
-			"port": 38440,
-			"pulse_interval": 20
+			"port": 38440
 		},
 
 		"name": "", // 本终端名称
@@ -73,8 +72,8 @@
 				"PlayerList_All": false // 这里覆盖了全局设置里的一个开关
 			}
 			"message_format": {
-				"INFO_PlayerJoin": "[%SERVER%] %SENDER% 来搬砖辣！",
-				"INFO_PlayerDisconnect": "[%SERVER%] %SENDER% 退出搬砖。"
+				"Info_PlayerJoin": "[%SERVER%] %SENDER% 来搬砖辣！",
+				"Info_PlayerDisconnect": "[%SERVER%] %SENDER% 退出搬砖。"
 			}
 		},
 
@@ -115,20 +114,21 @@
 		/// 设置开关
 		"events": {
 			"Registration_All": true,
-			"Info_all": true,
-			"Info_Network": true,
+			"Info_All": true,
+			"Info_PlayerNetwork": true,
 			"Info_PlayerDeath": true,
-			"Info_other": true,
+			"Info_Other": true,
 			"Message_All": true,
 			"PlayerList_All": true
 		},
 		/// 消息输出格式
 		"message_format": {
-			"INFO_General": "[%SERVER%] %CONTENT%",
-			"INFO_PlayerJoin": "[%SERVER%] %SENDER% joined the game.",
-			"INFO_PlayerDisconnect": "[%SERVER%] %SENDER% left the game.",
-			"INFO_PlayerDead": "[%SERVER%] %SENDER% dead.",
+			"Info_General": "[%SERVER%] %CONTENT%",
+			"Info_PlayerJoin": "[%SERVER%] %SENDER% joined the game.",
+			"Info_PlayerDisconnect": "[%SERVER%] %SENDER% left the game.",
+			"Info_PlayerDead": "[%SERVER%] %SENDER% dead.",
 			"Message_Overview": "[*][%SERVER%][%WORLD_DISPLAY%]%SENDER%: %CONTENT%",
+			"Message_ImageAlternative": "[IMAGE]",
 			"PlayerList_Layout": "[%SERVER%] There are %NOW%/%MAX% players online.%PLAYERS_LIST%",
 			"Registration_online": "Server %NAME% is now online.",
 			"Registration_offline": "Server %NAME% is now offline."
@@ -147,9 +147,9 @@
 |:------------------ |:------------------:|:------------------------- |:--------------------------------------------- |
 | Registration_All   | `boolean`          | 服务器上下线提示             | `Registration_online`, `Registration_offline` |
 | Info_All           | `boolean`          | [提示] 提示开关              | 所有以 `info` 开头的输出格式*                    |
-| Info_PlayerNetwork | `boolean`          | [提示] 玩家上下线提示         | `INFO_PlayerJoin`, `INFO_PlayerDisconnect`    |
-| Info_PlayerDeath   | `boolean`          | [提示] 玩家死亡提示           | `INFO_PlayerDead`                            |
-| Info_Other         | `boolean`          | [提示] 其他提示              | `INFO_General`                                |
+| Info_PlayerNetwork | `boolean`          | [提示] 玩家上下线提示         | `Info_PlayerJoin`, `Info_PlayerDisconnect`    |
+| Info_PlayerDeath   | `boolean`          | [提示] 玩家死亡提示           | `Info_PlayerDead`                            |
+| Info_Other         | `boolean`          | [提示] 其他提示              | `Info_General`                                |
 | Message_All        | `boolean`          | 聊天信息显示                | `Message_Overview`                            |
 | PlayerList_All     | `boolean`          | 查询在线玩家列表开关         | `PlayerList_Layout`                           |
 
@@ -164,11 +164,12 @@
 
 |        Key            |            描述            |
 |:--------------------- |:--------------------------|
-| INFO_General          | [提示] 通用提示输出格式      |
-| INFO_PlayerJoin       | [提示] 玩家加入游戏提示      |
-| INFO_PlayerDisconnect | [提示] 玩家退出游戏提示      |
-| INFO_PlayerDead       | [提示] 玩家死亡提示         |
+| Info_General          | [提示] 通用提示输出格式      |
+| Info_PlayerJoin       | [提示] 玩家加入游戏提示      |
+| Info_PlayerDisconnect | [提示] 玩家退出游戏提示      |
+| Info_PlayerDead       | [提示] 玩家死亡提示         |
 | Message_Overview      | 聊天信息显示               |
+| Message_ImageAlternative      | 游戏内 [图片] 替换文本 |
 | PlayerList_Layout     | 在线玩家列表输出格式         |
 | Registration_online   | 服务器上线提示               |
 | Registration_offline  | 服务器下线提示               |

@@ -1,0 +1,347 @@
+{
+	"definitions": {
+		"UUID": {
+			"$id": "#UUID",
+			"type": "string",
+			"pattern": "^([0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12})?$"
+		},
+		"universalConfigurationEvent": {
+			"type": "object",
+			"title": "功能开关",
+			"propertyNames": {
+				"type": "string",
+				"enum": [
+					"Registration_All",
+					"Info_All",
+					"Info_PlayerNetwork",
+					"Info_PlayerDeath",
+					"Info_Other",
+					"Message_All",
+					"PlayerList_All"
+				]
+			},
+			"properties": {
+				"Registration_All": {
+					"type": "boolean",
+					"title": "在群中发送服务器上下线提示"
+				},
+				"Info_All": {
+					"type": "boolean",
+					"title": "在群中发送服务器的所有提示消息"
+				},
+				"Info_PlayerNetwork": {
+					"type": "boolean",
+					"title": "在群中发送玩家上下线提示",
+					"description": "受到 Info_all 控制"
+				},
+				"Info_PlayerDeath": {
+					"type": "boolean",
+					"title": "在群中发送玩家死亡提示",
+					"description": "受到 Info_all 控制"
+				},
+				"Info_Other": {
+					"type": "boolean",
+					"title": "在群中发送其他未定义提示",
+					"description": "受到 Info_all 控制"
+				},
+				"Message_All": {
+					"type": "boolean",
+					"title": "在群中发送聊天信息"
+				},
+				"PlayerList_All": {
+					"type": "boolean",
+					"title": "在群中启用 /ls /list 命令"
+				}
+			}
+		},
+		"universalConfigurationMessageFormat": {
+			"type": "object",
+			"title": "输出字段",
+			"propertyNames": {
+				"type": "string",
+				"enum": [
+					"Info_General",
+					"Info_PlayerJoin",
+					"Info_PlayerDisconnect",
+					"Info_PlayerDead",
+					"Message_Overview",
+					"Message_ImageAlternative",
+					"PlayerList_Layout",
+					"Registration_Online",
+					"Registration_Offline"
+				]
+			},
+			"properties": {
+				"Info_General": {
+					"type": "string",
+					"title": "提示消息通用显示格式",
+					"description": "可用变量 :\n%SERVER% : 服务器名\n%CONTENT% : 提示消息正文",
+					"examples": [
+						"[%SERVER%] %CONTENT%"
+					]
+				},
+				"Info_PlayerJoin": {
+					"type": "string",
+					"title": "玩家登陆提示消息显示格式",
+					"description": "可能受到 Info_General 控制\n可用变量 :\n%SERVER% : 服务器名\n%SENDER% : 玩家用户名",
+					"examples": [
+						"[%SERVER%] %SENDER% joined the game.",
+						"[%SERVER%] %SENDER% 加入了游戏。"
+					]
+				},
+				"Info_PlayerDisconnect": {
+					"type": "string",
+					"title": "玩家退出游戏提示消息显示格式",
+					"description": "可能受到 Info_General 控制\n可用变量 :\n%SERVER% : 服务器名\n%SENDER% : 玩家用户名",
+					"examples": [
+						"[%SERVER%] %SENDER% left the game.",
+						"[%SERVER%] %SENDER% 退出了游戏。"
+					]
+				},
+				"Info_PlayerDead": {
+					"type": "string",
+					"title": "玩家死亡提示消息显示格式",
+					"description": "可能受到 Info_General 控制\n可用变量 :\n%SERVER% : 服务器名\n%SENDER% : 玩家用户名",
+					"examples": [
+						"[%SERVER%] %SENDER% dead.",
+						"[%SERVER%] %SENDER% 死掉了。"
+					]
+				},
+				"Message_Overview": {
+					"type": "string",
+					"title": "聊天信息消息显示格式",
+					"description": "可用变量 :\n%SERVER% : 服务器名\n%WORLD_DISPLAY% : 世界名\n%SENDER% : 玩家用户名\n%CONTENT% : 聊天消息正文",
+					"examples": [
+						"[*][%SERVER%][%WORLD_DISPLAY%]%SENDER%: %CONTENT%"
+					]
+				},
+				"Message_ImageAlternative": {
+					"type": "string",
+					"title": "游戏中聊天信息图片内容文本消息",
+					"description": "",
+					"examples": [
+						"[IMAGE]",
+						"[图片]"
+					]
+				},
+				"PlayerList_Layout": {
+					"type": "string",
+					"title": "在线玩家列表消息显示格式",
+					"description": "可用变量 : \n%SERVER% : 服务器名\n%NOW% : 当前玩家数量\n%MAX% : 最大玩家数量\n%PLAYERS_LIST% : 在线玩家列表",
+					"examples": [
+						"[%SERVER%] There are %NOW%/%MAX% players online.\n%PLAYERS_LIST%",
+						"[%SERVER%] 现在有 %NOW%/%MAX% 名玩家在线。\n%PLAYERS_LIST%",
+						"[%SERVER%] 现在有 %NOW% 名玩家在线，最多允许 %MAX% 名玩家同时在线。\n%PLAYERS_LIST%"
+					]
+				},
+				"Registration_Online": {
+					"type": "string",
+					"title": "服务器上线提示显示格式",
+					"description": "可用变量 : \n%SERVER%, %NAME% : 服务器名",
+					"examples": [
+						"Server %NAME% is now online.",
+						"%NAME% 上线啦！"
+					]
+				},
+				"Registration_Offline": {
+					"type": "string",
+					"title": "服务器下线提示显示格式",
+					"description": "可用变量 : \n%SERVER%, %NAME% : 服务器名",
+					"examples": [
+						"Server %NAME% is now offline.",
+						"%NAME% 下线了。"
+					]
+				}
+			}
+		},
+		"universalConfiguration": {
+			"type": "object",
+			"title": "通用功能设置",
+			"properties": {
+				"events": {
+					"$ref": "#/definitions/universalConfigurationEvent"
+				},
+				"message_format": {
+					"$ref": "#/definitions/universalConfigurationMessageFormat"
+				}
+			}
+		}
+	},
+	"type": "object",
+	"title": "JustChat CoolQ 端配置文件",
+	"properties": {
+		"version": {
+			"type": "object",
+			"title": "配置文件版本信息",
+			"properties": {
+				"config": {
+					"type": "integer",
+					"title": "配置文件版本号",
+					"examples": [
+						2
+					],
+					"minimum": 2,
+					"maximum": 2
+				}
+			},
+			"required": [
+				"config"
+			]
+		},
+		"connection": {
+			"type": "object",
+			"title": "连接配置信息",
+			"properties": {
+				"server": {
+					"type": "object",
+					"title": "服务器身份配置信息",
+					"properties": {
+						"enable": {
+							"type": "boolean",
+							"title": "是否开启服务器模式"
+						},
+						"port": {
+							"type": "integer",
+							"title": "服务器端口",
+							"description": "本插件侦听的端口",
+							"examples": [
+								38440
+							],
+							"minimum": 1,
+							"maximum": 65535
+						}
+					},
+					"required": [
+						"enable",
+						"port"
+					]
+				},
+				"client": {
+					"type": "object",
+					"title": "客户端身份配置信息 [未完成]",
+					"properties": {
+						"enable": {
+							"type": "boolean",
+							"title": "是否开启客户端模式"
+						},
+						"address": {
+							"type": "string",
+							"title": "目标服务器地址",
+							"examples": [
+								"127.0.0.1",
+								"[::1]",
+								"localhost"
+							],
+							"pattern": "^(.*)$"
+						},
+						"port": {
+							"type": "integer",
+							"title": "目标服务器端口",
+							"examples": [
+								38440
+							],
+							"minimum": 1,
+							"maximum": 65535
+						}
+					},
+					"required": [
+						"enable",
+						"address",
+						"port"
+					]
+				},
+				"name": {
+					"type": "string",
+					"title": "本终端的名字"
+				},
+				"ID": {
+					"title": "本终端的编号，格式为 UUID",
+					"examples": [
+						""
+					],
+					"$ref": "#/definitions/UUID"
+				}
+			},
+			"required": [
+				"server",
+				"client",
+				"name",
+				"ID"
+			]
+		},
+		"services": {
+			"type": "array",
+			"title": "服务组配置信息",
+			"contains": {
+				"type": "object",
+				"title": "一个服务组的配置信息",
+				"properties": {
+					"bind": {
+						"type": "object",
+						"title": "该服务组的绑定信息",
+						"properties": {
+							"qqgroups": {
+								"type": "array",
+								"title": "该服务组绑定的QQ群",
+								"contains": {
+									"type": "integer",
+									"title": "一个群号"
+								}
+							},
+							"minecraft": {
+								"type": "array",
+								"title": "该服务组绑定的 Minecraft 终端",
+								"contains": {
+									"title": "一个 Minecraft 终端的 UUID",
+									"examples": [
+										""
+									],
+									"$ref": "#/definitions/UUID"
+								}
+							}
+						},
+						"required": [
+							"qqgroups",
+							"minecraft"
+						]
+					},
+					"events": {
+						"$ref": "#/definitions/universalConfigurationEvent"
+					},
+					"message_format": {
+						"$ref": "#/definitions/universalConfigurationMessageFormat"
+					}
+				},
+				"required": [
+					"bind"
+				]
+			}
+		},
+		"qqgroups": {
+			"type": "array",
+			"title": "QQ群的设置",
+			"contains": {
+				"type": "object",
+				"title": "一个QQ群的设置",
+				"properties": {
+					"groupid": {
+						"type": "integer",
+						"title": "一个群号"
+					},
+					"config": {
+						"$ref": "#/definitions/universalConfiguration"
+					}
+				}
+			}
+		},
+		"global_configuration": {
+			"$ref": "#/definitions/universalConfiguration"
+		}
+	},
+	"required": [
+		"version",
+		"connection",
+		"services",
+		"global_configuration"
+	]
+}
