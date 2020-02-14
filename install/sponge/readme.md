@@ -13,7 +13,7 @@
 ## 配置文件
 - 基础配置文件 `config.conf`
 ```conf
-#服务器设置
+# 服务器设置
 server {
 	# 本终端编号
 	ID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
@@ -26,34 +26,41 @@ server {
 	
 	# 欲连接的服务器的端口
 	port=38440
-	
-	# 客户端心跳包的时间间隔。0为关闭。(单位:秒)
-	pulseInterval=20
 }
+
+# 功能设置
+functionControl {
+
+    # 将游戏角色死亡信息的游戏中原始消息转发到QQ群
+    # 当本设置开启时，QQ群设置中的 Info_PlayerDead 会被 Info_General 覆盖
+    forwardPlayersDeadOriginalMessages=true
+
+    # 将玩家上下线信息的游戏中原始消息转发到QQ群
+    # 当本设置开启时，QQ群设置中的 Info_PlayerJoin、Info_PlayerDisconnect 会被 Info_General 覆盖
+    forwardPlayersLoggingAndDisconnectionMessages=false
+}
+
 ```
 - 消息输出格式 `locale.conf`
-```conf
-# 消息显示格式
-messageFormat {
-    # 网页超链接显示格式 [未被使用]
-    URL {arguments {CONTENT {optional=false}}closeArg="}"content {extra=[{color=bluetext="{CONTENT}"underlined=true}]text=""}openArg="{"options {closeArg="}"openArg="{"}}
-    # QQ群消息AT(@)显示格式
-    at {arguments {TARGET {optional=false}}closeArg="}"content {extra=[{color=bluetext="{TARGET}"}]text=""}openArg="{"options {closeArg="}"openArg="{"}}
-    # QQ表情显示格式
-    face {arguments {CONTENT {optional=false}}closeArg="}"content {extra=[{text="{CONTENT}"}]text=""}openArg="{"options {closeArg="}"openArg="{"}}
-    # QQ表情地址
-    faceURL="https://exercisebook.github.io/JustChat/resource/CQ/face/{ID}.{EXTENSION}"
-    # 图片显示格式
-    image {arguments {CONTENT {optional=false}}closeArg="}"content {extra=[{color=bluetext="{CONTENT}"underlined=true}]text=""}openArg="{"options {closeArg="}"openArg="{"}}
-    # 整体消息显示格式
-    overview {arguments {BODY {optional=false}SENDER {optional=false}}closeArg="}"content {color=resetextra=[{color="dark_green"text="{SENDER}"},{text=": "},{text="{BODY}"}]text="[*]"}openArg="{"options {closeArg="}"openArg="{"}}
-    # 红包显示格式
-    redEnvelope {arguments {TITLE {optional=false}}closeArg="}"content {extra=[{color=redtext="{TITLE}"underlined=true}]text=""}openArg="{"options {closeArg="}"openArg="{"}}
-    # 一般富文本消息显示格式
-    rich {arguments {TEXT {optional=false}}closeArg="}"content {extra=[{color=bluetext="{TEXT}"underlined=true}]text=""}openArg="{"options {closeArg="}"openArg="{"}}
-    # 分享链接显示格式
-    share {arguments {TITLE {optional=false}}closeArg="}"content {extra=[{color=bluetext="{TITLE}"underlined=true}]text=""}openArg="{"options {closeArg="}"openArg="{"}}
-    # 普通文本消息显示格式
-    text {arguments {CONTENT {optional=false}}closeArg="}"content {extra=[{text="{CONTENT}"}]text=""}openArg="{"options {closeArg="}"openArg="{"}}
-}
-```
+
+## 指令
+### `/justchat`
+- 介绍 : 主设置指令
+- 用法 : `/justchat`
+- 基础权限 : `justchat.admin`
+
+### `/justchat reload`
+- 介绍 : 重载插件配置
+- 用法 : `/justchat reload`
+- 基础权限 : `justchat.admin.reload`
+
+## 权限
+| 权限 | 说明 |
+|:----|:-----|
+|`justchat.admin`|管理员设置指令|
+|`justchat.admin.reload`|重载插件配置指令|
+|`justchat.forward.chat`|允许将聊天信息发送到QQ群|
+|`justchat.forward.network.*`|允许将上下线信息发送到QQ群|
+|`justchat.forward.network.join`|允许将上线信息发送到QQ群|
+|`justchat.forward.network.disconnect`|允许将下线信息发送到QQ群|
+|`justchat.forward.death`|允许将游戏角色死亡信息发送到QQ群|
