@@ -272,7 +272,7 @@
 		"services": {
 			"type": "array",
 			"title": "服务组配置信息",
-			"contains": {
+			"items": {
 				"type": "object",
 				"title": "一个服务组的配置信息",
 				"properties": {
@@ -283,7 +283,7 @@
 							"qqgroups": {
 								"type": "array",
 								"title": "该服务组绑定的QQ群",
-								"contains": {
+								"items": {
 									"type": "integer",
 									"title": "一个群号"
 								}
@@ -291,7 +291,7 @@
 							"minecraft": {
 								"type": "array",
 								"title": "该服务组绑定的 Minecraft 终端",
-								"contains": {
+								"items": {
 									"title": "一个 Minecraft 终端的 UUID",
 									"examples": [
 										""
@@ -320,7 +320,7 @@
 		"qqgroups": {
 			"type": "array",
 			"title": "QQ群的设置",
-			"contains": {
+			"items": {
 				"type": "object",
 				"title": "一个QQ群的设置",
 				"properties": {
