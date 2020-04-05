@@ -25,7 +25,7 @@
 [配置文件格式介绍](../../install/coolq/#配置文件)  
 	1. `[server]mode` 修改为 `server` 使得本插件以服务端模式运行。  
 	默认: `server`
-	1. `[server]ip` 修改为本插件所侦听的公网 IPv4 地址。   
+	1. `[server]ip` 修改为本插件所侦听的本地连接 IPv4 地址。   
 	默认: `0.0.0.0`
 	1. `[server]port` 修改为本插件所侦听的端口号。
 	1. `[config]groupid` 修改为当前机器人所作用的QQ群群号
