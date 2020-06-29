@@ -48,7 +48,7 @@
   - 用途：网络连接
 
 ## 开源：
-- 协议文档: https://github.com/ParaParty/JustChat_Private
-- 酷Q端: https://github.com/ParaParty/JustChat_CoolQ
-- Bukkit 端: https://github.com/ParaParty/JustChat-MultiRobot-Bukkit
-- Sponge 端: https://github.com/ParaParty/JustChat_Sponge
+- 协议文档: <https://github.com/ParaParty/JustChat_Private>
+- 酷Q端: <https://github.com/ParaParty/JustChat_CoolQ>
+- Bukkit 端: <https://github.com/ParaParty/JustChat-MultiRobot-Bukkit>
+- Sponge 端: <https://github.com/ParaParty/JustChat_Sponge>
