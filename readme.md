@@ -32,7 +32,7 @@
 - VexView
 	- Bukkit端 : <https://www.vexview.net/index.php?resources/24/>
 - CoolQ : <https://cqp.cc/t/41412>
-- 
+
 ## 第三方支持库
 - [GitHub/xuuhaoo/OkSocket](https://github.com/xuuhaoo/OkSocket)
   - 版权：Copyright [2018] [徐昊]
@@ -46,3 +46,9 @@
   - 版权：Copyright © 1993-2006, Chad Z. Hower (aka Kudzu) and the Indy Pit Crew. All rights reserved.
   - 开原协议：[BSD](http://www.nevrona.com/Indy/BSDLicense.html)
   - 用途：网络连接
+
+## 开源：
+- 协议文档: https://github.com/ParaParty/JustChat_Private
+- 酷Q端: https://github.com/ParaParty/JustChat_CoolQ
+- Bukkit 端: https://github.com/ParaParty/JustChat-MultiRobot-Bukkit
+- Sponge 端: https://github.com/ParaParty/JustChat_Sponge
