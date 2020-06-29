@@ -47,3 +47,28 @@ imageX: 0.68
 #这个值需要在0和1之间，它是你屏幕从上到下的百分比高度
 imageY: 0.65
 ```
+
+## 指令
+### `/multirobot`
+- 介绍 : 主指令
+- 用法 : `/multirobot`
+
+### `/multirobot:info`
+- 介绍 : 发送一条消息到群里
+- 用法 : `/multirobot:info 消息内容`
+- 权限 : `multirobot.forward.chat`
+- 
+### `/multirobot:qq`
+- 介绍 : 开启或关闭QQ消息，服务器重启后设置清空
+- 用法 : `/multirobot:qq`
+- 权限 : 所有玩家
+
+## 权限
+| 权限 | 说明 |
+|:----|:-----|
+|`multirobot.admin`|管理员设置指令（暂无）|
+|`multirobot.forward.chat`|允许将聊天信息发送到QQ群|
+|`multirobot.forward.network.*`|允许将上下线信息发送到QQ群|
+|`multirobot.forward.network.join`|允许将上线信息发送到QQ群|
+|`multirobot.forward.network.disconnect`|允许将下线信息发送到QQ群|
+|`multirobot.forward.death`|允许将游戏角色死亡信息发送到QQ群|
