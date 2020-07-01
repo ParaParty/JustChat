@@ -4,7 +4,7 @@
 - JustChat 的 Bukkit / Spigot 端插件。
 
 ## 安装
-1. [下载插件](https://github.com/ExerciseBook/JustChat/releases/)
+1. [下载插件](https://github.com/ParaParty/JustChat/releases/)
 1. 复制到 [Bukkit](https://bukkit.org/)/Spigot(https://spigotmc.org/)插件目录
 1. 重启一次 Bukkit/Spigot ，使得插件生成插件配置文件
 1. 使用 [notepad++](https://notepad-plus-plus.org/) 或 [Sublime Text](http://www.sublimetext.com/) 或 记事本 或 gedit 或 vim 等文本编辑器修改**并保存**配置文件

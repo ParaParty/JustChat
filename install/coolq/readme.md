@@ -12,7 +12,7 @@
 - 如果您是从 `1.x` 版本升级而来，因插件配置文件改动较大，无法自动升级。请先备份原有设置文件，清理设置目录后再升级插件。
 
 ## 安装
-1. [下载插件](https://github.com/ExerciseBook/JustChat/releases/)
+1. [下载插件](https://github.com/ParaParty/JustChat/releases/)
 1. 复制cpk文件到 [酷Q](https://cqp.cc)插件目录
 1. 重启一次 酷Q ，使得插件生成插件配置文件
 1. 使用 [notepad++](https://notepad-plus-plus.org/) 或 [Sublime Text](http://www.sublimetext.com/) 或 记事本 或 gedit 或 vim 等文本编辑器修改**并保存**配置文件
@@ -27,7 +27,7 @@
 ```jsonc
 {
 	/// 配置文件提示文件，使用如 VSCode 等编辑器可以让支持本条设置以实现辅助提示功能
-	"$schema": "https://github.com/ExerciseBook/JustChat/raw/V2/schema/config.json",
+	"$schema": "https://github.com/ParaParty/JustChat/raw/V2/json-schema/V2/config.json",
 
 	/// 配置文件版本
 	"version": {
