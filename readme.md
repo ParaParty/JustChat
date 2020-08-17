@@ -39,15 +39,15 @@
 ## 第三方支持库
 - [GitHub/xuuhaoo/OkSocket](https://github.com/xuuhaoo/OkSocket)
   - 版权：Copyright [2018] [徐昊]
-  - 开原协议：[Apache 2 License](https://www.apache.org/licenses/LICENSE-2.0)
+  - 开源协议：[Apache 2 License](https://www.apache.org/licenses/LICENSE-2.0)
   - 用途：网络连接
 - [GitHub/linkedin/URL-Detector](https://github.com/linkedin/URL-Detector)
   - 版权：Copyright 2015 LinkedIn Corp. All rights reserved.
-  - 开原协议：[Apache 2 License](https://www.apache.org/licenses/LICENSE-2.0)
+  - 开源协议：[Apache 2 License](https://www.apache.org/licenses/LICENSE-2.0)
   - 用途：识别聊天消息中的网址
 - [Internet Direct (Indy)](https://www.indyproject.org/)
   - 版权：Copyright © 1993-2006, Chad Z. Hower (aka Kudzu) and the Indy Pit Crew. All rights reserved.
-  - 开原协议：[BSD](http://www.nevrona.com/Indy/BSDLicense.html)
+  - 开源协议：[BSD](http://www.nevrona.com/Indy/BSDLicense.html)
   - 用途：网络连接
 
 ## 开源：
