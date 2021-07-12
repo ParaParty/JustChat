@@ -32,8 +32,9 @@
 - MCBBS
 	- Bukkit端 : <http://www.mcbbs.net/thread-840749-1-1.html>
 	- Sponge端 : <http://www.mcbbs.net/thread-841495-1-1.html>
-- VexView
-	- Bukkit端 : <https://www.vexview.net/index.php?resources/24/>
+~~- VexView~~
+	~~- Bukkit端 : <https://www.vexview.net/index.php?resources/24/>~~
+- VexView作者弃坑，已不支持
 - CoolQ : <https://cqp.cc/t/41412>
 
 ## 第三方支持库
